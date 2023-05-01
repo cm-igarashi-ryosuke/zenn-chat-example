@@ -1,3 +1,31 @@
+このリポジトリは[AI Chat GPT-3 example](https://github.com/vercel/examples/tree/main/solutions/ai-chatgpt)テンプレートを元に作成しています。
+
+詳細は[こちらの記事](https://dev.classmethod.jp/articles/zenn-chat-with-gpt3/)を参照してください。
+
+ローカルで実行する場合、元の手順に加え、以下が必要です。
+
+- PineconeのAPIキーと環境名を`.env`に追加します。
+- Pineconeになにかしらのデータを登録します。
+
+Pineconeのmetadataのフォーマットは以下のとおりです。
+
+```
+{
+    'title': 'ページのタイトル',
+    'url': 'ページのURL',
+    'sentence': 'ベクトル化する前のテキスト',
+}
+```
+
+- `.npmrc`に以下を記述します。（ pinecone-ts-client の [#44](https://github.com/pinecone-io/pinecone-ts-client/issues/44) の問題を回避するため、パッケージをforkしています。）
+
+```
+//npm.pkg.github.com/:_authToken=ghp_XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX(personal access token)
+@cm-igarashi-ryosuke:registry=https://npm.pkg.github.com
+```
+
+===
+
 # AI Chat GPT-3 example
 
 This example shows how to implement a simple chat bot using Next.js, API Routes, and [OpenAI ChatGPT API](https://beta.openai.com/docs/api-reference/completions/create).

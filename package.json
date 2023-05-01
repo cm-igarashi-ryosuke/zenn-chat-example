@@ -18,7 +18,8 @@
     "react": "latest",
     "react-cookie": "^4.1.1",
     "react-dom": "latest",
-    "react-wrap-balancer": "^0.1.5"
+    "react-wrap-balancer": "^0.1.5",
+    "@cm-igarashi-ryosuke/pinecone": "0.0.12"
   },
   "devDependencies": {
     "@types/node": "^17.0.45",
